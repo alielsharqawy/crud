@@ -1,0 +1,142 @@
+/*  start of main style */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --body-color: #040d12;
+  --font-color: #fff;
+  --dev-color: #032c27;
+  --dev-focus-color: #092035;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+body {
+  color: var(--font-color);
+  background-color: var(--body-color);
+}
+.crud {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* end of main style */
+/* start of head style */
+.head {
+  text-align: center;
+  text-transform: uppercase;
+}
+.head h1 {
+  margin-top: 10px;
+}
+.head p {
+  margin-top: -20px;
+}
+/* end of head style */
+/* start of inputs style */
+input {
+  width: 100%;
+  background-color: var(--dev-color);
+  border: none;
+  outline: none;
+  color: var(--font-color);
+  border-radius: 5px;
+  height: 30px;
+  margin: 4px 0;
+  padding-left: 4px;
+  transition: 0.2s;
+}
+input:focus {
+  background-color: var(--dev-focus-color);
+  transform: scale(1.05);
+}
+.price {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#total {
+  background-color: #a00d02;
+  padding: 5px 2px;
+  border-radius: 4px;
+}
+#total::before {
+  content: "total:";
+}
+button {
+  width: 100%;
+  text-transform: capitalize;
+  cursor: pointer;
+  background: var(--dev-focus-color);
+  transition: 0.4s;
+  margin: 4px 0;
+  outline: none;
+  border: none;
+  height: 30px;
+  color: var(--font-color);
+  border-radius: 5px;
+}
+button:hover {
+  transform: scale(1.01);
+  background-color: #0e3a61 !important;
+  letter-spacing: 0.5px;
+}
+#submit{
+  width: 100%;
+}
+/* end of inputs style */
+/* start of outputs style */
+.btnSearch {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.btnSearch button {
+  width: 50%;
+}
+/* end of outputs style */
+/* start of table style */
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+th{
+  text-transform: uppercase;
+}
+th, td{
+  padding: 5px;
+}
+/* end of table style */
+/* scroll btn */
+#scroll{
+  margin: 20px;
+  width: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: none;
+  
+  font-size: 20px;
+  background-color: var(--dev-color);
+}
+@media (min-width: 768px) {
+  .crud {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .crud {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .crud {
+    width: 1170px;
+  }
+}

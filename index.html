@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- css all min file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- css normalization file -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- css mail file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h1>cruds</h1>
+        <p>product management system</p>
+      </div>
+      <div class="inputs">
+        <input placeholder="title" id="title" type="text" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            placeholder="price"
+            id="price"
+            type="number"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="taxes"
+            id="taxes"
+            type="number"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="ads"
+            id="ads"
+            type="number"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="discount"
+            id="discount"
+            type="number"
+          />
+          <small onkeyup="getTotal()" id="total"></small>
+        </div>
+        <input placeholder="count" id="count" type="number" />
+        <input placeholder="category" id="category" type="text" />
+        <button id="submit">create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input
+            onkeyup="searchData(this.value)"
+            type="text"
+            id="search"
+            placeholder="search"
+          />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">
+              search by title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="searchCategord">
+              search by category
+            </button>
+          </div>
+          <div id="deleteAll"></div>
+          <table>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <button id="scroll">^</button>
+    </div>
+    <!-- js file -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
